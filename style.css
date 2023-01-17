@@ -1,0 +1,261 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto  ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    margin: 4rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4.4rem;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav ul li a::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid #8C8C8C;
+    bottom: -2px;
+    left: 1px;
+    transition: width .3s;
+}
+
+nav ul li a.active::before {
+    width: 35%;
+    border-bottom: 2px solid #000000;
+}
+
+nav ul li a:hover::before {
+    width: 35%;
+    border-bottom: 2px solid #8C8C8C;
+}
+
+main {
+    display: flex;
+    margin-top: 5.9rem;
+    gap: 8.7rem;
+}
+
+main .left-col {
+    width: 45%;
+}
+
+main .right-col {
+    flex-grow: 1;
+}
+
+.left-col h1 {
+    font-size: 5.2rem;
+    font-weight: bold;
+    font-family: 'Playfair Display';
+    margin: 0;
+}
+
+.left-col p.sub-heading {
+    margin-top: 3.5rem;
+    font-size: 1.8rem;
+    font-weight: 200;
+    font-family: 'Poppins';
+}
+
+.cta-btns {
+    display: flex;
+    gap: 4.2rem;
+    margin-top: 5rem;
+}
+
+.cta-btns a.primary-cta {
+    padding: 1.25rem 2.2rem;
+    background-color: #EBE8D0;
+    border-radius: 0.8rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    transition: 300ms;
+}
+
+.cta-btns a.primary-cta:hover {
+    background-color: #EFE794;
+}
+
+.cta-btns a.secondary-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+a.secondary-cta span {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+a.secondary-cta:hover {
+    text-decoration: underline;
+}
+
+a.secondary-cta svg {
+    width: 1.8rem;
+    transition: transform .3s;
+}
+
+a.secondary-cta:hover svg {
+    transform: translateX(10px);
+}
+
+.news {
+    display: flex;
+    align-items: flex-start;
+    gap: 4.2rem;
+    margin-top: 3.5rem;
+    border: 2px solid #000000;
+    border-radius: 0.8rem;
+    padding: 3rem;
+    position: relative;
+}
+
+.news::before {
+    position: absolute;
+    content: '';
+    background: url(/images/confetti.svg);
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+}
+
+.news p {
+    margin: 0;
+}
+
+.news .employees {
+    font-size: 3.3rem;
+    font-weight: 200;
+    line-height: 100%;
+}
+
+.news .details {
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+.right-col {
+    display: grid;
+    gap: 4.1rem;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+        'left right'
+        'left bottom';
+}
+
+.card {
+    border-radius: 0.8rem;
+    padding: 1.1rem;
+    display: flex;
+    align-items: flex-end;
+    transition: background-size .8s;
+}
+
+.card .card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .6rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    width: 100%;
+    transition: transform .8s;
+}
+
+.card-details p {
+    margin: 0;
+}
+
+.card-details div .product-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.card-details div .product-desc {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #323030;
+}
+
+.card-details .product-prize {
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+.card1 {
+    grid-area: left;
+    background: url(/images/clothing1.jpg);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    position: relative;
+}
+
+.card1::before {
+    position: absolute;
+    content: '';
+    background: url(/images/tag.svg) no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 25px;
+    left: -29px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.card2 {
+    background: url(/images/clothing2.jpg);
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+
+.card3 {
+    background: url(/images/clothing3.jpg);
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+
+.card:hover {
+    background-size: 160%;
+}
+
+.card:hover .card-details {
+    transform: translateY(-10px);
+}
